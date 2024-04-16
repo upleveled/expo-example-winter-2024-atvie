@@ -56,6 +56,10 @@ export default function Guests() {
     return null;
   }
 
+  if (typeof id !== 'string') {
+    return null;
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>
