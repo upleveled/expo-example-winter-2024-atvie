@@ -1,6 +1,6 @@
 import { useLocalSearchParams } from 'expo-router';
 import { useEffect, useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
 import { colors } from '../../styles/constants';
 
 const styles = StyleSheet.create({
@@ -10,6 +10,11 @@ const styles = StyleSheet.create({
   },
   text: {
     color: colors.text,
+    fontSize: 20,
+  },
+  profilePicture: {
+    width: 200,
+    height: 200,
   },
 });
 
@@ -28,6 +33,8 @@ export default function Guests() {
   const { id } = useLocalSearchParams();
 
   const [guest, setGuest] = useState<Guest>();
+
+  const imageContext = require.context('../../assets', false, /\.(webp)$/);
 
   useEffect(() => {
     async function loadGuest() {
@@ -57,6 +64,18 @@ export default function Guests() {
       <Text style={styles.text}>
         {guest.attending ? 'Attending' : 'Not attending'}
       </Text>
+      <Image
+        style={styles.profilePicture}
+        source={imageContext(`./guest-${id}.webp`)}
+        alt="profile picture"
+      />
+      <Image
+        style={styles.profilePicture}
+        source={{
+          uri: `https://res.cloudinary.com/trueque-image/image/upload/v1713269496/guest-${id}.webp`,
+        }}
+        alt="profile picture"
+      />
     </View>
   );
 }
