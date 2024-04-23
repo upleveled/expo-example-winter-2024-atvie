@@ -1,6 +1,7 @@
 import Constants from 'expo-constants';
+import { Image } from 'expo-image';
 import React from 'react';
-import { Image, SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import { colors } from '../styles/constants';
 
 const styles = StyleSheet.create({
