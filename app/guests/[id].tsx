@@ -1,6 +1,7 @@
+import { Image } from 'expo-image';
 import { useLocalSearchParams } from 'expo-router';
 import { useEffect, useState } from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { colors } from '../../styles/constants';
 
 const styles = StyleSheet.create({
@@ -33,7 +34,7 @@ export default function Guests() {
 
   const [guest, setGuest] = useState<Guest>();
 
-  const imageContext = require.context('../../assets', false, /\.(webp)$/);
+  const imageContext = require.context('../../assets', false, /\.(avif)$/);
 
   useEffect(() => {
     async function loadGuest() {
@@ -69,7 +70,7 @@ export default function Guests() {
       </Text>
       <Image
         style={styles.profilePicture}
-        source={imageContext(`./guest-${id}.webp`)}
+        source={imageContext(`./guest-${id}.avif`)}
         alt="profile picture"
       />
       <Image
