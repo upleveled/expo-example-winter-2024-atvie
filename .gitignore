@@ -1,17 +1,37 @@
-guest-list-mobile/node_modules/
-guest-list-mobile/.expo/
-guest-list-mobile/dist/
-guest-list-mobile/npm-debug.*
-guest-list-mobile/*.jks
-guest-list-mobile/*.p8
-guest-list-mobile/*.p12
-guest-list-mobile/*.key
-guest-list-mobile/*.mobileprovision
-guest-list-mobile/*.orig.*
-guest-list-mobile/web-build/
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+
+# Native
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
 
 # macOS
 .DS_Store
+*.pem
 
-guest-list-mobile/.eslintcache
-guest-list-mobile/*.tsbuildinfo
+# local env files
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+.eslintcache

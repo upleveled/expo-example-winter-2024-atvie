@@ -26,8 +26,7 @@ type Guest = {
   attending: boolean;
 };
 
-const API_URL =
-  'https://bea0fb32-50d0-406e-9d94-d4749bccb9fd-00-30ic8gpo0g96a.picard.replit.dev';
+const API_URL = 'https://fjh676-4000.csb.app';
 
 export default function Guests() {
   const { id } = useLocalSearchParams();
