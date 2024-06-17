@@ -1,5 +1,5 @@
 import { Image } from 'expo-image';
-import { useLocalSearchParams } from 'expo-router';
+import { Link, useLocalSearchParams } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { colors } from '../../styles/constants';
@@ -27,7 +27,7 @@ type Guest = {
   attending: boolean;
 };
 
-const API_URL = 'https://fjh676-4000.csb.app';
+const API_URL = 'https://j2lm64-4000.csb.app';
 
 export default function Guests() {
   const { id } = useLocalSearchParams();
@@ -80,6 +80,7 @@ export default function Guests() {
         }}
         alt="profile picture"
       />
+      <Link href="/">Back</Link>
     </View>
   );
 }

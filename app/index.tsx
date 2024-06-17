@@ -4,7 +4,7 @@ import { FlatList, StyleSheet } from 'react-native';
 import GuestItem from '../components/GuestItem';
 import { colors } from '../styles/constants';
 
-const API_URL = 'https://fjh676-4000.csb.app';
+const API_URL = 'https://j2lm64-4000.csb.app';
 
 const styles = StyleSheet.create({
   button: {
